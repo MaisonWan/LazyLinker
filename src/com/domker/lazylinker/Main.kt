@@ -1,13 +1,14 @@
 package com.domker.lazylinker
 
-import com.domker.lazylinker.frame.MainFrame
+import com.domker.lazylinker.widget.MainFrame
+import com.domker.lazylinker.widget.getFrameLocation
+import com.domker.lazylinker.widget.getFrameSize
 import javax.swing.JFrame
 
 fun main(args: Array<String>) {
-    val frame = MainFrame("Test")
+    val frame = MainFrame("Lazy Linker")
     frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-    frame.setSize(800, 600)
-    frame.setLocation(200, 300)
-    frame.pack()
+    frame.size = getFrameSize()
+    frame.location = getFrameLocation()
     frame.isVisible = true
 }
