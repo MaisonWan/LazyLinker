@@ -42,6 +42,5 @@ class LinkerParser {
         } finally {
             reader?.close()
         }
-
     }
 }
