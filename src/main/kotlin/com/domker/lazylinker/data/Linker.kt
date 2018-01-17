@@ -1,9 +1,8 @@
 package com.domker.lazylinker.data
 
-class Linker {
-    companion object {
-        const val TYPE_COMMAND = 0x1
-    }
+import com.google.gson.annotations.SerializedName
 
-
-}
+data class Linker(val type: String,
+                  val name: String,
+                  @SerializedName("run_path") val runPath: String,
+                  val content: String)

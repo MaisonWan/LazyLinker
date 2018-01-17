@@ -1,11 +1,15 @@
 package com.domker.lazylinker.data
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * Linker的分页
  */
-class LinkerPage(var pageName: String) {
+class LinkerPage {
+    val linkers = mutableListOf<Linker>()
 
-    private val linkers = mutableListOf<Linker>()
+    @SerializedName("page_name")
+    lateinit var pageName: String
 
     /**
      * Linker的数量
@@ -27,4 +31,6 @@ class LinkerPage(var pageName: String) {
     internal fun setPageName(name: String) {
         pageName = name
     }
+
+    internal fun getPageName() = pageName
 }

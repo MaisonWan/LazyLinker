@@ -1,30 +1,36 @@
-{
-  "Tab1": [
-    {
-      "type": "command",
-      "name": "编译",
-      "run_path": "~/Code/",
-      "content": "ls -all"
-    },
-    {
-      "type": "command",
-      "name": "网络",
-      "run_path": "~/Code/",
-      "content": "ifconfig"
-    }
-  ],
-  "Tab2": [
-    {
-      "type": "command",
-      "name": "编译",
-      "run_path": "~/Code/",
-      "content": "ls -all"
-    },
-    {
-      "type": "command",
-      "name": "网络",
-      "run_path": "~/Code/",
-      "content": "ifconfig"
-    }
-  ]
-}
+[
+  {
+    "page_name": "Tab1",
+    "linkers": [
+      {
+        "type": "command",
+        "name": "编译",
+        "run_path": "~/Code/",
+        "content": "ls -all"
+      },
+      {
+        "type": "command",
+        "name": "网络",
+        "run_path": "~/Code/",
+        "content": "ifconfig"
+      }
+    ]
+  },
+  {
+    "page_name": "Tab2",
+    "linkers": [
+      {
+        "type": "command",
+        "name": "编译2",
+        "run_path": "~/Code/",
+        "content": "ls -all"
+      },
+      {
+        "type": "command",
+        "name": "网络2",
+        "run_path": "~/Code/",
+        "content": "ifconfig"
+      }
+    ]
+  }
+]
