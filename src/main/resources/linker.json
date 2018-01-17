@@ -1,0 +1,30 @@
+{
+  "Tab1": [
+    {
+      "type": "command",
+      "name": "编译",
+      "run_path": "~/Code/",
+      "content": "ls -all"
+    },
+    {
+      "type": "command",
+      "name": "网络",
+      "run_path": "~/Code/",
+      "content": "ifconfig"
+    }
+  ],
+  "Tab2": [
+    {
+      "type": "command",
+      "name": "编译",
+      "run_path": "~/Code/",
+      "content": "ls -all"
+    },
+    {
+      "type": "command",
+      "name": "网络",
+      "run_path": "~/Code/",
+      "content": "ifconfig"
+    }
+  ]
+}
