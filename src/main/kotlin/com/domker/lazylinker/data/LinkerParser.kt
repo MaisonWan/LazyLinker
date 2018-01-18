@@ -2,9 +2,7 @@ package com.domker.lazylinker.data
 
 //import com.google.gson.Gson
 import com.google.gson.Gson
-import com.google.gson.JsonParser
 import com.google.gson.reflect.TypeToken
-import sun.awt.image.ImageWatched
 import java.io.File
 import java.io.FileReader
 
@@ -16,11 +14,7 @@ class LinkerParser {
     fun parser(): List<LinkerPage> {
         val data = readJsonData()
         println(data)
-        val list = parserJson(data) as MutableList //mutableListOf<LinkerPage>()
-//        list.add(LinkerPage("编译"))
-//        list.add(LinkerPage("拷贝"))
-//        list.add(LinkerPage("安装"))
-        return list
+        return parserJson(data) as MutableList
     }
 
     private fun parserJson(data: String?): List<LinkerPage> {
