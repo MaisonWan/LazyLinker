@@ -7,6 +7,7 @@ import com.domker.lazylinker.data.TYPE_COMMAND
 import java.awt.FlowLayout
 import java.awt.Label
 import javax.swing.JButton
+import javax.swing.JFrame
 import javax.swing.JPanel
 
 class WidgetCreator {
@@ -47,12 +48,26 @@ class WidgetCreator {
 
                 val button = JButton(linker.name)
                 button.addActionListener {
-                    Command.invoke(linker)
+                    val frame = showConsoleFrame()
+                    Command.invoke(linker, {
+                        frame.append(it)
+                    })
                 }
                 panel.add(button)
                 panel
             }
             else -> null
         }
+    }
+
+    /**
+     * 显示控制台
+     */
+    private fun showConsoleFrame(): ConsoleFrame {
+        val frame = ConsoleFrame("Console")
+        frame.size = getFrameSize()
+        frame.location = getFrameLocation()
+        frame.isVisible = true
+        return frame
     }
 }

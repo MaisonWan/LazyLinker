@@ -13,7 +13,7 @@ object Command {
     /**
      * 执行一个命令
      */
-    fun invoke(linker: Linker) {
+    fun invoke(linker: Linker, readline: (String) -> Unit) {
         val process = Runtime.getRuntime().exec(linker.content, null, File(linker.runPath))
         val ir = InputStreamReader(process.inputStream)
         val input = BufferedReader(ir)
@@ -21,7 +21,12 @@ object Command {
         var line = input.readLine()
         while (line != null) {
             println(line)
+            readline(line)
             line = input.readLine()
         }
+    }
+
+    fun invoke(linker: Linker) {
+        invoke(linker, {})
     }
 }

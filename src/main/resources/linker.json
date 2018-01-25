@@ -5,13 +5,13 @@
       {
         "type": "command",
         "name": "编译",
-        "run_path": "/Users/wanlipeng/Code/",
+        "run_path": "/Users/Maison/Code/",
         "content": "ls -all"
       },
       {
         "type": "command",
         "name": "网络",
-        "run_path": "/Users/wanlipeng/Code/",
+        "run_path": "/Users/Maison/Code/",
         "content": "ifconfig"
       }
     ]
